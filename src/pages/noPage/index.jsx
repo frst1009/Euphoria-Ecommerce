@@ -1,6 +1,6 @@
 import "./noPage.scss";
 import ErrorImg from "./../../assets/img/error.png";
-import ErrorContent from "../../components/error/index";
+import ErrorContent from "../../components/error/index.jsx";
 
 const NoPage = () => {
   return (
