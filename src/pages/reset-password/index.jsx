@@ -1,6 +1,6 @@
 import React from "react";
 
-import Navbar from "../../components/signInNavbar";
+import Navbar from "../../components/signInNavbar/index.jsx";
 import Reset from "../../components/resetPassword/Reset";
 
 const index = () => {
