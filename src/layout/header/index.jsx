@@ -1,4 +1,4 @@
-import Navbar from "../../components/navbar/index.jsx";
+import Navbar from "../../components/navbar/index";
 
 import { Routes, Route, useParams } from "react-router-dom";
 

@@ -1,4 +1,4 @@
-import ProfileHeading from "../../components/profileHeading/index.jsx";
+import ProfileHeading from "../../components/profileHeading/index";
 import "./profile.scss";
 import Tabs from "@mui/joy/Tabs";
 import TabList from "@mui/joy/TabList";
@@ -10,7 +10,7 @@ import WishList from "../wishlist";
 import Orders from "./../orders";
 import AccountInfo from "./../accountInfo";
 import { useNavigate } from "react-router-dom";
-import Limelight from "../../components/limelight/index.jsx";
+import Limelight from "../../components/limelight/index";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import AddAddress from "../addAddress";

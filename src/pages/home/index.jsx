@@ -6,7 +6,7 @@ import Hero from "../../components/hero";
 import Limelight from "../../components/limelight";
 import NewArrival from "../../components/newArrival";
 import Offers from "../../components/offers";
-import SavingZone from "../../components/savingZone/index.jsx";
+import SavingZone from "../../components/savingZone/index";
 import AdHolder from "../../components/adHolder";
 
 export default function Home() {

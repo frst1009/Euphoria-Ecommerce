@@ -1,6 +1,6 @@
 import React from "react";
 import "./addAddress.scss";
-import FormikForAddress from "../../components/formikForAddress/index.jsx";
+import FormikForAddress from "../../components/formikForAddress/index";
 
 const AddAddress = () => {
   return (
