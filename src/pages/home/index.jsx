@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import AdHolder from "../../components/adHolder";
 import Categories from "../../components/categories";
 import Deals from "../../components/deals";
 import Feedback from "../../components/feedback";
@@ -8,6 +7,7 @@ import Limelight from "../../components/limelight";
 import NewArrival from "../../components/newArrival";
 import Offers from "../../components/offers";
 import SavingZone from "../../components/savingZone/index.jsx";
+import AdHolder from "../../components/adHolder";
 
 export default function Home() {
   const { t } = useTranslation();
