@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import Categories from "../../components/categories/index.jsx";
+import Categories from "../../components/categories/index";
 import Deals from "../../components/deals";
 import Feedback from "../../components/feedback";
 import Hero from "../../components/hero";
