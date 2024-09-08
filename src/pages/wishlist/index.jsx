@@ -1,6 +1,6 @@
 import "./wishlist.scss";
-import EmptyWishlist from "../../components/emptyWishlist/index.jsx";
-import WishlistCard from "../../components/wishlistCard/index.jsx";
+import EmptyWishlist from "../../components/emptyWishlist/index";
+import WishlistCard from "../../components/wishlistCard/index";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchProductsInU, fetchUsers } from "../../redux/slice/UserSlice";

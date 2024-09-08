@@ -1,13 +1,13 @@
 import { useTranslation } from "react-i18next";
-import AdHolder from "../../components/adHolder/index.jsx";
-import Categories from "../../components/categories/index.jsx";
-import Deals from "../../components/deals/index.jsx";
-import Feedback from "../../components/feedback/index.jsx";
-import Hero from "../../components/hero/index.jsx";
-import Limelight from "../../components/limelight/index.jsx";
-import NewArrival from "../../components/newArrival/index.jsx";
-import Offers from "../../components/offers/index.jsx";
-import SavingZone from "../../components/savingZone/index.jsx";
+import AdHolder from "../../components/adHolder/index/AdHolder";
+import Categories from "../../components/categories/index/Categories";
+import Deals from "../../components/deals/index/Deals";
+import Feedback from "../../components/feedback/index/Feedback";
+import Hero from "../../components/hero/index/Hero";
+import Limelight from "../../components/limelight/index/Limelight";
+import NewArrival from "../../components/newArrival/index/NewArrival";
+import Offers from "../../components/offers/index/Offers";
+import SavingZone from "../../components/savingZone/index/SavingZone";
 
 export default function Home() {
   const { t } = useTranslation();
