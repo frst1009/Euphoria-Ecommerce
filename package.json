@@ -2,6 +2,9 @@
   "name": "euphoria-ecommerce",
   "private": true,
   "version": "0.0.0",
+  "engines": {
+    "node": "20.x"
+   },
   "type": "module",
   "scripts": {
     "start": "vite preview",
@@ -10,9 +13,6 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "engines": {
-  "node": "16.20.2"
-},
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
