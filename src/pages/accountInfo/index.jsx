@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import "./accountInfo.scss";
-import FormikForPersonalInfoName from "../../components/formikForP_InfoName/index";
-import FormikForPersonalInfoEmail from "../../components/formikForP_InfoEmail/index";
-import FormikForPersonalInfoPhone from "../../components/formikForP_InfoPhone/index";
-import FormikForPersonalInfoPassword from "../../components/formikForP_InfoPassword/index";
+import FormikForPersonalInfoName from "../../components/formikForP_InfoName/index.jsx";
+import FormikForPersonalInfoEmail from "../../components/formikForP_InfoEmail/index.jsx";
+import FormikForPersonalInfoPhone from "../../components/formikForP_InfoPhone/index.jsx";
+import FormikForPersonalInfoPassword from "../../components/formikForP_InfoPassword/index.jsx";
 import { useNavigate } from "react-router-dom";
-import AddressCard from "../../components/addressCard/index";
+import AddressCard from "../../components/addressCard/index.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUsers } from "../../redux/slice/UserSlice";
 import { fetchAddresses } from "../../redux/slice/AddressSlice";

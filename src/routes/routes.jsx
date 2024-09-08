@@ -1,4 +1,4 @@
-import UserRoot from "./../pages/userRoot/index";
+import UserRoot from "./../pages/userRoot/index.jsx";
 import Home from "../pages/home";
 import NoPage from "../pages/noPage";
 import Products from "../pages/products";
@@ -19,7 +19,7 @@ import AccountInfo from "../pages/accountInfo";
 import ConfirmedOrder from "../pages/confirmedOrder";
 import AddAddress from "../pages/addAddress";
 // import FormikForAddress from "../components/formikForAddress";
-import AdminPage from "../pages/admin/index";
+import AdminPage from "../pages/admin/index.jsx";
 
 export const routes = [
   {

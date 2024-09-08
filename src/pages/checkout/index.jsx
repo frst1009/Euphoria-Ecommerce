@@ -1,10 +1,10 @@
 import style from "./Checkout.module.scss";
 import Image from "../../assets/img/savingDown.png";
-import ProfileHeading from "../../components/profileHeading/index";
-import FormikForAddress from "../../components/formikForAddress/index";
-import FormikForCheckout from "../../components/formikForCheckout/index";
+import ProfileHeading from "../../components/profileHeading/index.jsx";
+import FormikForAddress from "../../components/formikForAddress/index.jsx";
+import FormikForCheckout from "../../components/formikForCheckout/index.jsx";
 import { Divider } from "antd";
-import OrderSummeryCard from "../../components/orderSumCard/index";
+import OrderSummeryCard from "../../components/orderSumCard/index.jsx";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";

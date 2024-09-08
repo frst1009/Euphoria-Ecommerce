@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-import DetailDescription from "../../components/detailDescription/index";
-import DetailOpening from "../../components/detailOpening/index";
-import Limelight from "../../components/limelight/index";
+import DetailDescription from "../../components/detailDescription/index.jsx";
+import DetailOpening from "../../components/detailOpening/index.jsx";
+import Limelight from "../../components/limelight/index.jsx";
 import "./style.scss";
 // import { fetchProducts } from '../../redux/slice/ProductsSlice'
 import { useEffect, useState } from "react";

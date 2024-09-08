@@ -1,5 +1,5 @@
 import Check from "../../components/CheckEmail/Check";
-import Navbar from "../../components/SigninNavbar/index";
+import Navbar from "../../components/SigninNavbar/index.jsx";
 
 const CheckEmail = () => {
   return (

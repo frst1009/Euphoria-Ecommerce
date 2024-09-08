@@ -1,4 +1,4 @@
-import Navbar from "../../components/SigninNavbar/index";
+import Navbar from "../../components/SigninNavbar/index.jsx";
 import SignupPage from "../../components/signup/SignupPage";
 
 const SignUp = () => {

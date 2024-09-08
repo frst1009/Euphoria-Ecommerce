@@ -1,10 +1,10 @@
 import React from "react";
 import "./style.scss";
-import AdminSideBar from "../../components/adminSidebar/index";
-import AdminList from "../../components/adminList/index";
+import AdminSideBar from "../../components/adminSidebar/index.jsx";
+import AdminList from "../../components/adminList/index.jsx";
 import { useSelector } from "react-redux";
-import AdminAdd from "../../components/adminAdd/index";
-import AdminAds from "../../components/adminAds/index";
+import AdminAdd from "../../components/adminAdd/index.jsx";
+import AdminAds from "../../components/adminAds/index.jsx";
 function AdminPage() {
   const adminCategory = useSelector((state) => state.interface.adminCategory);
   return (
