@@ -1,62 +1,65 @@
-import { useState } from "react"
-import "../Filter/Filter.scss"
-import purple from "../../assets/img/purple.png"
-import black from "../../assets/img/black.png"
-import red from "../../assets/img/red.png"
-import orange from "../../assets/img/orange.png"
-import navy from "../../assets/img/navy.png"
-import white from "../../assets/img/white.png"
-import broom from "../../assets/img/broom.png"
-import green from "../../assets/img/green.png"
-import yellow from "../../assets/img/yellow.png"
-import grey from "../../assets/img/grey.png"
-import pink from "../../assets/img/pink.png"
-import blue from "../../assets/img/blue.png"
+import { useState } from "react";
+import "./Filter.scss";
+import purple from "../../assets/img/purple.png";
+import black from "../../assets/img/black.png";
+import red from "../../assets/img/red.png";
+import orange from "../../assets/img/orange.png";
+import navy from "../../assets/img/navy.png";
+import white from "../../assets/img/white.png";
+import broom from "../../assets/img/broom.png";
+import green from "../../assets/img/green.png";
+import yellow from "../../assets/img/yellow.png";
+import grey from "../../assets/img/grey.png";
+import pink from "../../assets/img/pink.png";
+import blue from "../../assets/img/blue.png";
 
-import { useDispatch } from "react-redux"
-import { useEffect } from "react"
-import { fetchProducts, filterByCategory } from "../../redux/slice/ProductsSlice"
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import {
+  fetchProducts,
+  filterByCategory,
+} from "../../redux/slice/ProductsSlice";
 
 function Filter() {
   useEffect(() => {
-    dispatch(fetchProducts())
-  }, [])
+    dispatch(fetchProducts());
+  }, []);
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const collapse = (e) => {
-    const currentDiv = e.target
-    const nextDiv = currentDiv.nextElementSibling
-    const icon = currentDiv.querySelector(".fa-chevron-down")
+    const currentDiv = e.target;
+    const nextDiv = currentDiv.nextElementSibling;
+    const icon = currentDiv.querySelector(".fa-chevron-down");
 
     if (nextDiv && nextDiv.tagName.toLowerCase() === "div") {
       if (nextDiv.style.display === "none") {
-        nextDiv.style.display = ""
-        icon.classList.remove("rotate")
+        nextDiv.style.display = "";
+        icon.classList.remove("rotate");
       } else {
-        nextDiv.style.display = "none"
-        icon.classList.add("rotate")
+        nextDiv.style.display = "none";
+        icon.classList.add("rotate");
       }
     }
-  }
+  };
 
-  const [minValue, setMinValue] = useState(0)
-  const [maxValue, setMaxValue] = useState(100)
+  const [minValue, setMinValue] = useState(0);
+  const [maxValue, setMaxValue] = useState(100);
 
   const handleMinChange = (event) => {
-    const value = parseInt(event.target.value)
-    setMinValue(value)
-  }
+    const value = parseInt(event.target.value);
+    setMinValue(value);
+  };
 
   const handleMaxChange = (event) => {
-    const value = parseInt(event.target.value)
-    setMaxValue(value)
-  }
+    const value = parseInt(event.target.value);
+    setMaxValue(value);
+  };
 
   const handleFilterByCategory = (category) => {
-    dispatch(filterByCategory(category))
-    console.log(" wrong")
-  }
+    dispatch(filterByCategory(category));
+    console.log(" wrong");
+  };
   return (
     <div id="filter">
       <div className="main-header">
@@ -224,7 +227,7 @@ function Filter() {
         </ul>
       </div>
     </div>
-  )
+  );
 }
 
-export default Filter
+export default Filter;

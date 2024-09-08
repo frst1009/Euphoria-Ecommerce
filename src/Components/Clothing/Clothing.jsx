@@ -1,9 +1,9 @@
-import { useSelector } from "react-redux"
-import P_Card from "../P_Card/P_Card"
-import "../Clothing/Clothing.scss"
+import { useSelector } from "react-redux";
+import P_Card from "../P_Card/P_Card";
+import "./Clothing.scss";
 
 function Clothing() {
-  const products = useSelector((state) => state.products.products)
+  const products = useSelector((state) => state.products.products);
 
   return (
     <div id="clothing">
@@ -15,17 +15,18 @@ function Clothing() {
         </div>
       </div>
       <div className="cards">
-        {products && products.map((product) => (
-          <P_Card
-            key={product?.id}
-            product={product}
-            maxLength={20}
-            maxWidth="200px"
-          />
-        ))}
+        {products &&
+          products.map((product) => (
+            <P_Card
+              key={product?.id}
+              product={product}
+              maxLength={20}
+              maxWidth="200px"
+            />
+          ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default Clothing
+export default Clothing;

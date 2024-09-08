@@ -1,4 +1,4 @@
-import "../P_Card/P_Card.scss";
+import "./P_Card.scss";
 import {
   fetchProductsInU,
   fetchUsers,

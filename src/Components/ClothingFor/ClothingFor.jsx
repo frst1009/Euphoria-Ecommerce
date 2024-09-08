@@ -1,4 +1,4 @@
-import "../ClothingFor/ClothingFor.scss"
+import "./ClothingFor.scss";
 // import offer from "../../assets/img/Frame 114.png"
 function ClothingFor() {
   return (
@@ -10,12 +10,13 @@ function ClothingFor() {
         Reexplore Women&apos;s Clothing Collection Online at Euphoria
       </h2>
       <p className="p">
-        Women&apos;s Clothing Are you searching for the best website to buy Clothing
-        for Women online in India? Well, your search for the coolest and most
-        stylish womens clothing ends here. From trendy Casual Womens Wear Online
-        shopping to premium quality cotton women&apos;s apparel,{" "}
+        Women&apos;s Clothing Are you searching for the best website to buy
+        Clothing for Women online in India? Well, your search for the coolest
+        and most stylish womens clothing ends here. From trendy Casual Womens
+        Wear Online shopping to premium quality cotton women&apos;s apparel,{" "}
         <span className="span">Euphoria</span> has closet of Women Collection
-        covered with the latest and best designs of Women&apos;s Clothing Online.
+        covered with the latest and best designs of Women&apos;s Clothing
+        Online.
       </p>
       <p className="p">
         Our collection of clothes for women will make you the trendsetter with
@@ -41,7 +42,8 @@ function ClothingFor() {
       </p>
       <h2 className="h2">See More</h2>
       <h1 className="h1">
-        <i className="fa-solid fa-minus"></i>Buy Women&apos;s Clothing at Best Price
+        <i className="fa-solid fa-minus"></i>Buy Women&apos;s Clothing at Best
+        Price
       </h1>
       <div className="offer-container">
         <table className="custom-table">
@@ -101,7 +103,7 @@ function ClothingFor() {
         </table>
       </div>
     </div>
-  )
+  );
 }
 
-export default ClothingFor
+export default ClothingFor;
