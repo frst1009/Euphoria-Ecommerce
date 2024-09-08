@@ -18,7 +18,7 @@ import Orders from "../pages/orders";
 import AccountInfo from "../pages/accountInfo";
 import ConfirmedOrder from "../pages/confirmedOrder";
 import AddAddress from "../pages/addAddress";
-import FormikForAddress from "../components/formikForAddress";
+// import FormikForAddress from "../components/formikForAddress";
 import AdminPage from "../pages/admin/index";
 
 export const routes = [
@@ -109,7 +109,6 @@ export const routes = [
         path: "/admin",
         element: <AdminPage />,
       },
-
     ],
   },
 ];
