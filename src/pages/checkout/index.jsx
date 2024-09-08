@@ -1,10 +1,10 @@
 import style from "./Checkout.module.scss";
 import Image from "../../assets/img/savingDown.png";
-import ProfileHeading from "../../components/profileHeading";
-import FormikForAddress from "../../components/formikForAddress";
-import FormikForCheckout from "../../components/formikForCheckout";
+import ProfileHeading from "../../components/profileHeading/index";
+import FormikForAddress from "../../components/formikForAddress/index";
+import FormikForCheckout from "../../components/formikForCheckout/index";
 import { Divider } from "antd";
-import OrderSummeryCard from "../../components/orderSumCard";
+import OrderSummeryCard from "../../components/orderSumCard/index";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -13,8 +13,8 @@ import { useSelector } from "react-redux";
 const Checkout = () => {
   const [selectedOption, setSelectedOption] = useState("billing");
   const [selectedMethod, setSelectedMethod] = useState("card");
-  const navigate = useNavigate()
-  const basket = useSelector(state => state.user.basket)
+  const navigate = useNavigate();
+  const basket = useSelector((state) => state.user.basket);
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
@@ -65,15 +65,12 @@ const Checkout = () => {
                 Use a different shipping address
               </label>
             </div>
-
           </div>
           <Divider />
           <div className={style["choose-paymant-method"]}>
             <div className={style["choose-shipping-add-heading"]}>
               <h2>Payment Method</h2>
-              <p>
-                All transactions are secure and encrypted
-              </p>
+              <p>All transactions are secure and encrypted</p>
             </div>
             <div className={style["paymantM-selection"]}>
               <label>
@@ -108,15 +105,16 @@ const Checkout = () => {
             </div>
           </div>
           <div className={style["pay-btn"]}>
-            <button onClick={() => {
-              navigate('/confirmed-order')
-              axios.post('http://localhost:3000/purchases', basket)
-            }}>
+            <button
+              onClick={() => {
+                navigate("/confirmed-order");
+                axios.post("http://localhost:3000/purchases", basket);
+              }}
+            >
               Pay now
             </button>
           </div>
         </section>
-
 
         <section className={style["right-sect"]}>
           <OrderSummeryCard />

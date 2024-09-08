@@ -1,16 +1,11 @@
+import Navbar from "../../components/navbar/index";
 
-import Navbar from '../../components/navbar'
-
-import { Routes, Route, useParams } from 'react-router-dom';
-
+import { Routes, Route, useParams } from "react-router-dom";
 
 const Header = () => {
-
   let { type } = useParams();
 
-  return (
-    <Navbar />
-  )
-}
+  return <Navbar />;
+};
 
 export default Header;

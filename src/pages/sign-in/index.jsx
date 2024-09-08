@@ -1,8 +1,7 @@
-import React from 'react'
+import React from "react";
 
-
-import Navbar from "../../components/SigninNavbar"
-import Signin from '../../components/Sign-InPage/SignIn'
+import Navbar from "../../components/SigninNavbar/index";
+import Signin from "../../components/Sign-InPage/SignIn";
 
 const index = () => {
   return (
@@ -10,7 +9,7 @@ const index = () => {
       <Navbar />
       <Signin />
     </div>
-  )
-}
+  );
+};
 
-export default index
+export default index;
