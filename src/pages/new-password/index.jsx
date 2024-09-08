@@ -1,7 +1,7 @@
 // import NewPass from '../../components/NewPassword/NewPass'
 
-import NewPass from "../../components/NewPassword/NewPass";
-import Navbar from "../../components/SigninNavbar/index.jsx";
+import NewPass from "../../components/nnewPassword";
+import Navbar from "../../components/signInNavbar";
 
 // import Navbar from '../../components/Signin/NavbarSign'
 const NewPassword = () => {

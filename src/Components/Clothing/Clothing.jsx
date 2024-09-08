@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import P_Card from "../P_Card/P_Card";
+import P_Card from "../pCard/P_Card";
 import "./Clothing.scss";
 
 function Clothing() {

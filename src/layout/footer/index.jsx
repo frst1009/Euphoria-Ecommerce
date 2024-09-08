@@ -1,12 +1,11 @@
-import FooterElem from "../../components/footer"
+import FooterElem from "../../components/footer";
 
-import Signin from '../../components/Sign-InPage/SignIn';
-import { Routes, Route, useParams } from 'react-router-dom';
+// import Signin from "../../components/signInPage/SignIn";
+import { Routes, Route, useParams } from "react-router-dom";
 import SignUp from "../../pages/sign-up";
 
 const Footer = () => {
-
-  let { type } = useParams()
+  let { type } = useParams();
 
   return (
     <>
@@ -17,9 +16,9 @@ const Footer = () => {
 
           : <FooterElem />
       } */}
-      {type = ! 'sign-in' || 'sign-up' && <FooterElem />}
+      {(type = !"sign-in" || ("sign-up" && <FooterElem />))}
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

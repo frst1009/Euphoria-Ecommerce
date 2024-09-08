@@ -1,4 +1,4 @@
-import Navbar from "../../components/SigninNavbar/index.jsx";
+import Navbar from "../../components/signInNavbar/index.jsx";
 import VerificationPage from "../../components/verification/VerificationPage";
 
 const Verification = () => {

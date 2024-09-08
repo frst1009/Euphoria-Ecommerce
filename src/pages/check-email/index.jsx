@@ -1,4 +1,4 @@
-import Check from "../../components/CheckEmail/Check";
+import Check from "../../components/checkEmail/Check.jsx";
 import Navbar from "../../components/SigninNavbar/index.jsx";
 
 const CheckEmail = () => {

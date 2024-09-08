@@ -1,18 +1,19 @@
 import React, { useState } from "react";
-import Friends from "../../assets/img/sign-up.svg";
+import Girls from "../../assets/img/girls.svg";
 import Google from "../../assets/img/Google.svg";
 import Twitter from "../../assets/img/Twitter.svg";
 import { IoIosEyeOff } from "react-icons/io";
 import { IoIosEye } from "react-icons/io";
-import Button from "../signInNavbar/Button";
 import { useTranslation } from "react-i18next";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { useNavigate, Link } from "react-router-dom";
 import * as Yup from "yup";
-import "./sign-up.css";
+import "./sign-in.css";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
+import Button from "../signInNavbar/Button";
 
-const SignupPage = () => {
+
+const Signin = () => {
   const navigate = useNavigate();
 
   const [type, setType] = useState("password");
@@ -37,23 +38,33 @@ const SignupPage = () => {
   });
 
   // formik
-  const handleSubmitSignUp = (values, { setSubmitting }) => {
-    axios.post("http://localhost:3000/users", values).then((res) => {
-      console.log(res.data);
+  const handleSubmit = async (values, { setSubmitting }) => {
+    setSubmitting(true);
+    const response = await axios.get("http://localhost:3000/users", values);
+    const users = response.data;
+    const userFinder = users.find(
+      (item) => item.name === values.name && item.password === values.password
+    );
+
+    if (userFinder) {
+      console.log("success");
       navigate("/");
-    });
+    } else {
+      console.log("error");
+    }
+
     setSubmitting(false);
   };
 
   return (
-    <section className="container grid lg:grid-cols-2  justify-between py-20 gap-8 ">
+    <section className="container grid lg:grid-cols-2  justify-between  ">
       <div className="girls flex md:content-center">
-        <img src={Friends} alt="" />
+        <img src={Girls} alt="" />
       </div>
       <div className="flex flex-col items-center ">
         <div className="md:pt-10 pb-8">
           <h1 className="lg:text-3xl md:text-4xl pb-5 font-bold ">
-            {t("signup")}
+            {t("sign_page")}
           </h1>
 
           <div className="flex flex-col gap-3 ">
@@ -64,14 +75,14 @@ const SignupPage = () => {
               <img src={Twitter} alt="" />
             </div>
 
-            <h2>
-              <span className="or">{t("or")}</span>
+            <h2 className="leading-3">
+              <span children="py-0 px-8">{t("or")}</span>
             </h2>
 
             <Formik
               initialValues={{ name: "", password: "" }}
               validationSchema={validationschema}
-              onSubmit={handleSubmitSignUp}
+              onSubmit={handleSubmit}
             >
               {({ isSubmitting }) => (
                 <Form className="pt-4">
@@ -86,7 +97,7 @@ const SignupPage = () => {
                     />
                     <ErrorMessage
                       name="name"
-                      className="text-red-700 md:text-xl  lg:text-sm"
+                      className="text-red-700"
                       component="div"
                     />
                   </div>
@@ -106,49 +117,29 @@ const SignupPage = () => {
                     <Field
                       type={type}
                       name="password"
-                      className=" rounded-md py-2 px-2 border border-gray-500 "
+                      className=" rounded-md py-2 px-2 border border-gray-500"
                     />
                     <ErrorMessage
                       name="password"
-                      className="text-red-700 md:text-xl  lg:text-sm"
+                      className="text-red-700"
                       component="div"
                     />
-                    <p className="text-left lg:text-xs md:text-xl py-1  text-gray-500 ">
-                      {t("rule")}
+                    <p className="text-right underline  lg:text-sm md:text-xl ">
+                      {t("pass")}{" "}
                     </p>
                   </div>
-                  <div className="flex flex-col  items-start pt-3">
-                    <div className="mb-2 flex items-center">
-                      <input type="checkbox" className="" />
-                      <label
-                        htmlFor="checkbox"
-                        className="lg:text-xs md:text-xl pl-1 text-gray-700"
-                      >
-                        {t("agree")}{" "}
-                      </label>
-                    </div>
-                    <div className="mb-2 flex items-center">
-                      <input type="checkbox" className="" />
-                      <label
-                        htmlFor="checkbox"
-                        className="lg:text-xs md:text-xl pl-1 text-gray-700"
-                      >
-                        {t("subscribe")}{" "}
-                      </label>
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-start pt-5">
+                  <div className="flex flex-col items-start pt-3">
                     <Button
-                      text={t("signup")}
+                      text={t("sign_in")}
                       disabled={isSubmitting}
                       btnClass="btn-register"
                     />
-                    <Link to="/sign-in">
+                    <Link to="/sign-up">
                       <p className=" text-gray-700 md:text-xl lg:text-sm pt-2">
-                        {t("account2")}{" "}
-                        <bold className="bolder underline cursor-pointer ">
+                        {t("account")}{" "}
+                        <bold className="bolder underline ">
                           {" "}
-                          {t("signin")}{" "}
+                          {t("signup")}{" "}
                         </bold>
                       </p>
                     </Link>
@@ -163,4 +154,4 @@ const SignupPage = () => {
   );
 };
 
-export default SignupPage;
+export default Signin;
