@@ -1,12 +1,12 @@
 import { useTranslation } from "react-i18next";
-import AdHolder from "../../components/adHolder/index.jsx";
-import Categories from "../../components/categories/index.jsx";
-import Deals from "../../components/deals/index.jsx";
-import Feedback from "../../components/feedback/index.jsx";
-import Hero from "../../components/hero/index.jsx";
-import Limelight from "../../components/limelight/index.jsx";
-import NewArrival from "../../components/newArrival/index.jsx";
-import Offers from "../../components/offers/index.jsx";
+import AdHolder from "../../components/adHolder";
+import Categories from "../../components/categories";
+import Deals from "../../components/deals";
+import Feedback from "../../components/feedback";
+import Hero from "../../components/hero";
+import Limelight from "../../components/limelight";
+import NewArrival from "../../components/newArrival";
+import Offers from "../../components/offers";
 import SavingZone from "../../components/savingZone/index.jsx";
 
 export default function Home() {
