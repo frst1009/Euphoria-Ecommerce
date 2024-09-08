@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import AdHolder from "../../components/adHolder/index/AdHolder";
+import AdHolder from "../../components/adHolder/index.jsx";
 import Categories from "../../components/categories/index/Categories";
 import Deals from "../../components/deals/index/Deals";
 import Feedback from "../../components/feedback/index/Feedback";
