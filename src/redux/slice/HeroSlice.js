@@ -4,7 +4,7 @@ const initialState = {
   hero: [],
 };
 
-const HEROS = "http://localhost:3000/hero";
+const HEROS = "https://euphoria-ecommerce-f29s.onrender.com/hero";
 
 export const fetchHero = createAsyncThunk("hero/fetchHero", async () => {
   try {
@@ -21,11 +21,11 @@ export const heroSlice = createSlice({
   reducers: {
     postHero: (state, action) => {
       const heroObj = {
-        "img": action.payload.img,
-        "category": action.payload.category,
-        "text": action.payload.text,
-        "properties": action.payload.properties
-      }
+        img: action.payload.img,
+        category: action.payload.category,
+        text: action.payload.text,
+        properties: action.payload.properties,
+      };
       try {
         axios.post(HEROS, action.payload);
         state.hero = [...state.hero, action.payload];

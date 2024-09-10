@@ -108,7 +108,10 @@ const Checkout = () => {
             <button
               onClick={() => {
                 navigate("/confirmed-order");
-                axios.post("http://localhost:3000/purchases", basket);
+                axios.post(
+                  "https://euphoria-ecommerce-f29s.onrender.com/purchases",
+                  basket
+                );
               }}
             >
               Pay now

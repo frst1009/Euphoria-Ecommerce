@@ -36,7 +36,10 @@ const Reset = () => {
   // formik
   const handleSubmit = async (values, { setSubmitting }) => {
     setSubmitting(true);
-    const response = await axios.get("http://localhost:3000/login", values);
+    const response = await axios.get(
+      "https://euphoria-ecommerce-f29s.onrender.com/login",
+      values
+    );
     const users = response.data;
     const userFinder = users.find((item) => item.name === values.name);
 

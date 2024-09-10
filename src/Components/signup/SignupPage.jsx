@@ -38,10 +38,12 @@ const SignupPage = () => {
 
   // formik
   const handleSubmitSignUp = (values, { setSubmitting }) => {
-    axios.post("http://localhost:3000/users", values).then((res) => {
-      console.log(res.data);
-      navigate("/");
-    });
+    axios
+      .post("https://euphoria-ecommerce-f29s.onrender.com/users", values)
+      .then((res) => {
+        console.log(res.data);
+        navigate("/");
+      });
     setSubmitting(false);
   };
 

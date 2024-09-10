@@ -12,7 +12,6 @@ import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import Button from "../signInNavbar/Button";
 
-
 const Signin = () => {
   const navigate = useNavigate();
 
@@ -40,7 +39,10 @@ const Signin = () => {
   // formik
   const handleSubmit = async (values, { setSubmitting }) => {
     setSubmitting(true);
-    const response = await axios.get("http://localhost:3000/users", values);
+    const response = await axios.get(
+      "https://euphoria-ecommerce-f29s.onrender.com/users",
+      values
+    );
     const users = response.data;
     const userFinder = users.find(
       (item) => item.name === values.name && item.password === values.password

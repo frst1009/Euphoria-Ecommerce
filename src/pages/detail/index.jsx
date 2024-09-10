@@ -16,7 +16,7 @@ function ProductDetail() {
   useEffect(() => {
     // dispatch(fetchProducts())
     axios
-      .get("http://localhost:3000/products/" + id)
+      .get("https://euphoria-ecommerce-f29s.onrender.com/products/" + id)
       .then((res) => {
         setProduct(res.data);
       })
